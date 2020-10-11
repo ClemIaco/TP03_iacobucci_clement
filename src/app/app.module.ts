@@ -19,6 +19,7 @@ import { EmailPatternDirective } from './directives/email-pattern.directive';
 import { CountryPatternDirective } from './directives/country-pattern.directive';
 import { ProductListComponent } from './product-list/product-list.component';
 import {ApiService} from './services/api.service';
+import { SearchEngineComponent } from './search-engine/search-engine.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import {ApiService} from './services/api.service';
     CityPatternDirective,
     EmailPatternDirective,
     CountryPatternDirective,
-    ProductListComponent
+    ProductListComponent,
+    SearchEngineComponent
   ],
   imports: [
     BrowserModule,
