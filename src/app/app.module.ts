@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { AppRoutingModule} from './app-routing.module'
+import { AppRoutingModule} from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { TetiereComponent } from './tetiere/tetiere.component';
@@ -17,6 +18,7 @@ import { CityPatternDirective } from './directives/city-pattern.directive';
 import { EmailPatternDirective } from './directives/email-pattern.directive';
 import { CountryPatternDirective } from './directives/country-pattern.directive';
 import { ProductListComponent } from './product-list/product-list.component';
+import {ApiService} from './services/api.service';
 
 @NgModule({
   declarations: [
@@ -38,9 +40,10 @@ import { ProductListComponent } from './product-list/product-list.component';
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
