@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +9,11 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  title = 'AngularForm';
+  env = environment;
+  router: string;
+
+  constructor(private _router: Router)
+  {
+    this.router = _router.url;
+  }
 }

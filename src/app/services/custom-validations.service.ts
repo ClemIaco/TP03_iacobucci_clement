@@ -19,7 +19,7 @@ export class CustomvalidationsService {
   }  
   
   MatchPassword(password: string, confirmPassword: string) {  
-    return (formGroup: FormGroup) => {  
+    return (formGroup: FormGroup): { [key: string]: any } => {  
       const passwordControl = formGroup.controls[password];  
       const confirmPasswordControl = formGroup.controls[confirmPassword];  
   

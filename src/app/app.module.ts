@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AppRoutingModule} from './app-routing.module'
 
 import { AppComponent } from './app.component';
 import { TetiereComponent } from './tetiere/tetiere.component';
@@ -15,6 +16,7 @@ import { PostalCodePatternDirective } from './directives/postal-code-pattern.dir
 import { CityPatternDirective } from './directives/city-pattern.directive';
 import { EmailPatternDirective } from './directives/email-pattern.directive';
 import { CountryPatternDirective } from './directives/country-pattern.directive';
+import { ProductListComponent } from './product-list/product-list.component';
 
 @NgModule({
   declarations: [
@@ -30,11 +32,13 @@ import { CountryPatternDirective } from './directives/country-pattern.directive'
     PostalCodePatternDirective,
     CityPatternDirective,
     EmailPatternDirective,
-    CountryPatternDirective
+    CountryPatternDirective,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    ReactiveFormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

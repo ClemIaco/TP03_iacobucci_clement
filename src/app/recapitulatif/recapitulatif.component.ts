@@ -1,20 +1,19 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Client } from '../client';
+import { Client } from '../models/client';
 
 @Component({
   selector: 'app-recapitulatif',
   templateUrl: './recapitulatif.component.html',
   styleUrls: ['./recapitulatif.component.css']
 })
-export class RecapitulatifComponent implements OnInit {
+export class RecapitulatifComponent {
 
   constructor() { }
 
   @Input() client: Client;
 
-  
-  ngOnInit(): void {
-    
+  test(){
+    console.log(this.client.name);
   }
-
+  
 }
